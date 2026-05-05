@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    about.html - About BigPlanetarium page
+    Information about the planetarium, team, and FAQ
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About BigPlanetarium - a Bristol-based educational planetarium making space science accessible for everyone.">
+    <title>BigPlanetarium - About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigation -->
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">Big<span>Planetarium</span></a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                &#9776;
+            </button>
+
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main id="main">
+
+        <!-- hero section - matching index.html style -->
+        <section class="hero" aria-labelledby="about-heading">
+            <h1 id="about-heading">
+                About <span>BigPlanetarium</span>
+            </h1>
+            <p>A Bristol-based educational planetarium making space science accessible and exciting for absolutely everyone.</p>
+        </section>
+        <!-- mission section -->
+        <section aria-labelledby="mission-heading">
+            <h2 class="section-title" id="mission-heading">Our Mission</h2>
+            <p class="section-subtitle">Science is for everyone</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Education for All</h3>
+                        <p>
+                            We work with schools across Bristol and the South West to deliver 
+                            curriculum-linked planetarium sessions. Our dome shows bring the 
+                            Solar System to life in ways no textbook can.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Public Shows</h3>
+                        <p>
+                            Evening and weekend planetarium shows for curious adults and families. 
+                            From introductory tours of the night sky to specialist talks on 
+                            black holes and deep space exploration.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Accessible Online</h3>
+                        <p>
+                            This website follows WCAG 2.2 accessibility guidelines. We prioritise 
+                            clear language, strong contrast, and compatibility with assistive 
+                            technologies so anyone can explore space from home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about text section -->
+        <section aria-labelledby="who-heading">
+            <h2 class="section-title" id="who-heading">Who We Are</h2>
+            <p class="section-subtitle">A small team with a big passion for space</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <img 
+                        src="https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/3000/3020/apollo_lrg.jpg"
+                        alt="Earth as seen from space during the Apollo 17 mission, showing Africa and Antarctica beneath white clouds"
+                        loading="lazy"
+                    >
+                    <div class="card-content">
+                        <h3>Our Venue in Bristol</h3>
+                        <p>
+                            Our physical venue is fully accessible with step-free access throughout, 
+                            accessible toilets, designated seating areas, and hearing loops. 
+                            We welcome visitors of all abilities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Accessibility First</h3>
+                        <p>
+                            Accessibility is at the heart of everything we do. Our digital content 
+                            follows WCAG 2.2 guidelines, and our team is trained to support 
+                            visitors with a wide range of needs.
+                        </p>
+                        <p style="margin-top: 12px;">
+                            If you have any specific requirements, please contact us in advance 
+                            so we can ensure your visit is as comfortable as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- team section -->
+        <section aria-labelledby="team-heading">
+            <h2 class="section-title" id="team-heading">Meet the Team</h2>
+            <p class="section-subtitle">Passionate educators, astronomers, and designers</p>
+
+            <div class="planet-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <div class="planet-card" style="text-align: center; cursor: default;">
+                    <h3>Dr Rachel</h3>
+                    <span class="planet-tag">Director & Lead Astronomer</span>
+                    <p>PhD in Astrophysics with 15 years of experience in science communication.</p>
+                </div>
+
+                <div class="planet-card" style="text-align: center; cursor: default;">
+                    <h3>James Okonkwo</h3>
+                    <span class="planet-tag">Head of Education</span>
+                    <p>Former secondary science teacher passionate about making space fun for all ages.</p>
+                </div>
+
+                <div class="planet-card" style="text-align: center; cursor: default;">
+                    <h3>Kevin John</h3>
+                    <span class="planet-tag">Digital Accessibility Lead</span>
+                    <p>Specialises in WCAG compliance and inclusive design for web platforms.</p>
+                </div>
+
+                <div class="planet-card" style="text-align: center; cursor: default;">
+                    <h3>Tom Whitfield</h3>
+                    <span class="planet-tag">Creative Director</span>
+                    <p>Designs immersive dome experiences that captivate and educate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ section with accordion - FIXED STRUCTURE -->
+        <section aria-labelledby="faq-heading">
+            <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about visiting us</p>
+
+            <div class="accordion-wrap" style="max-width: 800px; margin: 0 auto;">
+
+                <!-- FAQ Item 1 -->
+                <div class="acc-item">
+                    <button class="acc-btn" aria-expanded="false" aria-controls="faq-panel-1">
+                        Do I need any science knowledge to enjoy the shows?
+                        <span class="acc-arrow">▼</span>
+                    </button>
+                    <div class="acc-panel" id="faq-panel-1">
+                        <div class="acc-panel-inner">
+                            Absolutely not! Our shows and resources are designed to be accessible to people of all backgrounds and ages. We use clear, plain language and build up concepts from scratch. Whether you are a total beginner or a seasoned stargazer, there is something here for you.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="acc-item">
+                    <button class="acc-btn" aria-expanded="false" aria-controls="faq-panel-2">
+                        Is the venue accessible for wheelchair users?
+                        <span class="acc-arrow">▼</span>
+                    </button>
+                    <div class="acc-panel" id="faq-panel-2">
+                        <div class="acc-panel-inner">
+                            Yes. Our Bristol venue has step-free access throughout, including to the planetarium dome. We have accessible toilets, designated seating areas, and hearing loops in all our presentation spaces. Please contact us in advance if you have specific requirements.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="acc-item">
+                    <button class="acc-btn" aria-expanded="false" aria-controls="faq-panel-3">
+                        How can I book a school visit?
+                        <span class="acc-arrow">▼</span>
+                    </button>
+                    <div class="acc-panel" id="faq-panel-3">
+                        <div class="acc-panel-inner">
+                            Contact our Head of Education, James Okonkwo, to discuss your needs. We offer both dome visits at our Bristol venue and portable planetarium visits to your school. Sessions can be tailored to your year group and curriculum topic.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="acc-item">
+                    <button class="acc-btn" aria-expanded="false" aria-controls="faq-panel-4">
+                        Is this website accessible?
+                        <span class="acc-arrow">▼</span>
+                    </button>
+                    <div class="acc-panel" id="faq-panel-4">
+                        <div class="acc-panel-inner">
+                            Yes! We have built this website with accessibility as a core priority, following WCAG 2.2 guidelines. This includes strong colour contrast, keyboard navigability, screen reader compatibility, descriptive alt text on all images, and support for users who prefer reduced motion.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- call to action -->
+        <section style="text-align:center; padding: 60px 20px;" aria-label="Call to action">
+            <h2 style="font-family:'Raleway',sans-serif; color:#ffffff; font-size:1.8rem; margin-bottom:14px;">
+                Ready to Explore Space?
+            </h2>
+            <p style="color:#a0a0c0; max-width:480px; margin:0 auto 28px auto;">
+                Start your journey through the Milky Way and discover all 8 planets in our Solar System.
+            </p>
+            <a href="planets.html" class="btn">Explore the Planets</a>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div>
+                <h4>BigPlanetarium</h4>
+                <p>A Bristol-based educational planetarium making space science accessible and exciting for everyone.</p>
+            </div>
+            <div aria-label="Footer links">
+                <h4>Pages</h4>
+                <ul style="list-style:none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul style="list-style:none;">
+                    <!-- opening in a new tab - I added aria-label to say this for screen readers -->
+                    <li><a href="https://www.nasa.gov" target="_blank" rel="noopener" aria-label="NASA website, opens in a new tab">NASA</a></li>
+                    <li><a href="https://www.esa.int" target="_blank" rel="noopener" aria-label="ESA website, opens in a new tab">ESA</a></li>
+                    <li><a href="https://unsplash.com" target="_blank" rel="noopener" aria-label="Unsplash free images, opens in a new tab">Unsplash</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BigPlanetarium, Bristol.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

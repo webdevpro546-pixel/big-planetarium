@@ -1,0 +1,638 @@
+/* my stylesheet for BigPlanetarium website */
+/* I used google fonts for the headings */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0a0a1a;
+    color: #e0e0f0;
+    line-height: 1.6;
+}
+
+/* ---- NAVIGATION ---- */
+
+nav {
+    background-color: #0d0d2b;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #7b2fbe;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #c084fc;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #e0e0f0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #c084fc;
+}
+
+.nav-links a.active {
+    color: #c084fc;
+    border-bottom: 2px solid #c084fc;
+    padding-bottom: 3px;
+}
+
+/* Nav toggle button */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 2px solid #7b2fbe;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+    background-color: #7b2fbe;
+    border-color: #c084fc;
+    outline: none;
+}
+
+/* ---- HERO SECTION ---- */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #0d0d2b, #0a0a1a);
+}
+
+.hero h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #c084fc;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #a0a0c0;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #7b2fbe;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #9d4edd;
+}
+
+/* ---- SECTIONS ---- */
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #a0a0c0;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* ---- CARDS ---- */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #12122a;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #7b2fbe;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #a0a0c0;
+    font-size: 0.95rem;
+}
+
+/* ---- FACTS BAR ---- */
+
+.facts-bar {
+    background-color: #0d0d2b;
+    padding: 40px 20px;
+    border-top: 1px solid #2a2a4a;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.facts-bar-inner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fact h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
+    color: #c084fc;
+}
+
+.fact p {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ---- VIDEO SECTION ---- */
+
+.video-section {
+    background-color: #0d0d2b;
+    padding: 60px 20px;
+    border-top: 1px solid #2a2a4a;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #2a2a4a;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ---- PLANET PAGE ---- */
+
+.planet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.planet-card {
+    background-color: #12122a;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    padding: 25px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.planet-card:hover,
+.planet-card:focus {
+    border-color: #c084fc;
+    transform: translateY(-3px);
+    outline: 2px solid #c084fc;
+    outline-offset: 2px;
+}
+
+.planet-card h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.planet-tag {
+    font-size: 0.75rem;
+    color: #c084fc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.planet-card p {
+    color: #a0a0c0;
+    font-size: 0.92rem;
+    margin-bottom: 15px;
+}
+
+.planet-facts-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.fact-box {
+    background-color: #1a1a35;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.fact-box dt {
+    font-size: 0.68rem;
+    color: #7070a0;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.fact-box dd {
+    font-size: 0.85rem;
+    color: #e0e0f0;
+    font-weight: 600;
+}
+
+/* modal for planet details */
+.modal-bg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-bg.open {
+    display: flex;
+}
+
+.modal-box {
+    background: #12122a;
+    border: 1px solid #7b2fbe;
+    border-radius: 10px;
+    padding: 35px;
+    max-width: 580px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-box h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.modal-type {
+    color: #c084fc;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    color: #a0a0c0;
+    line-height: 1.75;
+    margin-bottom: 12px;
+    font-size: 0.97rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: 1px solid #2a2a4a;
+    color: #a0a0c0;
+    font-size: 1rem;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.close-btn:hover {
+    border-color: #c084fc;
+    color: #c084fc;
+}
+
+/* form */
+
+.form label{
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #a0a0c0;"
+
+}
+
+.form input,.form select,.form textarea{
+    width: 100%; 
+    padding: 10px; 
+    background-color: #1a1a35; 
+    border: 1px solid #2a2a4a; 
+    border-radius: 5px; 
+    color: white;"
+}
+
+/* ---- ACCORDION (FAQ) ---- */
+.accordion-wrap {
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.acc-item {
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.acc-item:last-child {
+    border-bottom: none;
+}
+
+.acc-btn {
+    width: 100%;
+    background: #12122a;
+    border: none;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0f0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.97rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.acc-btn:hover {
+    background: #1a1a35;
+}
+
+.acc-arrow {
+    font-size: 0.8rem;
+    color: #c084fc;
+    transition: transform 0.3s;
+}
+
+.acc-btn[aria-expanded="true"] .acc-arrow {
+    transform: rotate(180deg);
+}
+
+.acc-panel {
+    background: #0d0d2b;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.acc-panel.open {
+    max-height: 500px;
+}
+
+.acc-panel-inner {
+    padding: 18px 22px;
+    color: #a0a0c0;
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+    background-color: #0d0d2b;
+    border-top: 1px solid #2a2a4a;
+    padding: 40px 30px 20px 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+}
+
+.footer-grid h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #c084fc;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.footer-grid p,
+.footer-grid li {
+    color: #7070a0;
+    font-size: 0.88rem;
+    list-style: none;
+    margin-bottom: 6px;
+}
+
+.footer-grid a {
+    color: #7070a0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-grid a:hover {
+    color: #c084fc;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #4a4a6a;
+    font-size: 0.82rem;
+    border-top: 1px solid #2a2a4a;
+    padding-top: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---- RESPONSIVE ---- */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid #2a2a4a;
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .nav-links a.active {
+        border-bottom: none;
+        color: #c084fc;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-toggle {
+        font-size: 1.5rem;
+        padding: 4px 10px;
+    }
+
+    .planet-facts-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* accessibility - users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Utility class for visually hidden content */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}

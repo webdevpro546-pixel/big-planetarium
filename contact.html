@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    contact.html page
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact BigPlanetarium - get in touch for school visits, public shows, or accessibility questions.">
+    <title>Contact Us - BigPlanetarium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigation -->
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">Big<span>Planetarium</span></a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                &#9776;
+            </button>
+
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main id="main">
+
+        <!-- hero section -->
+        <section class="hero" aria-labelledby="contact-heading">
+            <h1 id="contact-heading">
+                Get in <span>Touch</span>
+            </h1>
+            <p>Have questions about school visits, public shows, or accessibility? We'd love to hear from you.</p>
+        </section>
+
+        <!-- contact info and form -->
+        <section aria-labelledby="contact-info-heading">
+            <h2 class="section-title" id="contact-info-heading">Contact Us</h2>
+            <p class="section-subtitle">We're based in Bristol and ready to help</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px;">
+
+                <!-- Contact Details Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Visit Us</h3>
+                        <p>BigPlanetarium, 42 Harbourside Lane<br>
+                        Bristol, BS1 5AA, United Kingdom</p>
+                        
+                        <h3 style="margin-top: 20px;">Call Us</h3>
+                        <p>0117 123 4567</p>
+                        
+                        <h3 style="margin-top: 20px;">Email Us</h3>
+                        <p>hello@bigplanetarium.org</p>
+                        
+                        <h3 style="margin-top: 20px;">Opening Hours</h3>
+                        <p>Tuesday - Friday: 10am - 5pm<br>
+                        Saturday - Sunday: 11am - 6pm<br>
+                        Monday: Closed</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Send a Message</h3>
+                        <form action="#" method="post" class="form">
+                            <div style="margin-bottom: 15px;">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select an option</option>
+                                    <option value="school">School Visit Booking</option>
+                                    <option value="public">Public Show Enquiry</option>
+                                    <option value="accessibility">Accessibility Question</option>
+                                    <option value="general">General Enquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section aria-labelledby="map-heading">
+            <h2 class="section-title" id="map-heading">Find Us</h2>
+            <p class="section-subtitle">We're located on Bristol's historic harbourside</p>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Bristol%20Harbourside&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        title="Map showing BigPlanetarium location on Bristol Harbourside"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="text-align: center; color: #7070a0; font-size: 0.8rem; margin-top: 10px;">
+                    Nearest parking: Harbourside Car Park (5 min walk) | Accessible entrance on ground floor
+                </p>
+            </div>
+        </section>
+
+        <!-- Accessibility Info -->
+        <section aria-labelledby="accessibility-heading">
+            <h2 class="section-title" id="accessibility-heading">Accessibility Information</h2>
+            <p class="section-subtitle">We welcome all visitors</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Wheelchair Access</h3>
+                        <p>Step-free entrance throughout the venue. Accessible toilets on every floor. Designated wheelchair spaces in the planetarium dome.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Hearing Support</h3>
+                        <p>Hearing loops available in all presentation spaces. Please ask at reception upon arrival.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Visual Impairment</h3>
+                        <p>Large print guides available. Guide dogs welcome. Audio-described shows available on request.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div>
+                <h4>BigPlanetarium</h4>
+                <p>A Bristol-based educational planetarium making space science accessible and exciting for everyone.</p>
+            </div>
+            <div aria-label="Footer links">
+                <h4>Pages</h4>
+                <ul style="list-style:none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul style="list-style:none;">
+                    <!-- opening in a new tab - I added aria-label to say this for screen readers -->
+                    <li><a href="https://www.nasa.gov" target="_blank" rel="noopener" aria-label="NASA website, opens in a new tab">NASA</a></li>
+                    <li><a href="https://www.esa.int" target="_blank" rel="noopener" aria-label="ESA website, opens in a new tab">ESA</a></li>
+                    <li><a href="https://unsplash.com" target="_blank" rel="noopener" aria-label="Unsplash free images, opens in a new tab">Unsplash</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BigPlanetarium, Bristol.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

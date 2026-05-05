@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    index.html - BigPlanetarium homepage
+    This page gives an overview of the Milky Way galaxy
+    lang="en" is important for screen readers so they
+    know what language to read the page in
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BigPlanetarium - explore the Milky Way and our Solar System. Space education for everyone.">
+    <title>BigPlanetarium - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navigation -->
+    <!-- role="banner" tells screen readers this is the site header -->
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">Big<span>Planetarium</span></a>
+            <!-- mobile toggle button -->
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                &#9776;
+            </button>
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="planets.html">Planets</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content - this is the target for the skip link above -->
+    <main id="main">
+
+        <!-- hero section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">
+                Explore the <span>Milky Way</span>
+            </h1>
+            <p>Our galaxy is home to over 200 billion stars, countless worlds, and the only planet we know of with life. Discover it all here.</p>
+            <a href="planets.html" class="btn">Explore the Planets</a>
+        </section>
+        <!-- key facts about the milky way -->
+        <!-- aria-label gives this section a name for screen readers -->
+        <div class="facts-bar" aria-label="Milky Way key facts">
+            <div class="facts-bar-inner">
+                <div class="fact">
+                    <h2>200 billion+</h2>
+                    <p>Stars in the Milky Way</p>
+                </div>
+                <div class="fact">
+                    <h2>100,000</h2>
+                    <p>Light-years across</p>
+                </div>
+                <div class="fact">
+                    <h2>4.6 billion</h2>
+                    <p>Years old (our Solar System)</p>
+                </div>
+            </div>
+        </div>
+        <!-- about the milky way -->
+        <section aria-labelledby="milky-way-heading">
+            <h2 class="section-title" id="milky-way-heading">What Is the Milky Way?</h2>
+            <p class="section-subtitle">Our home galaxy — a barred spiral containing everything we have ever known</p>
+            <div class="cards-grid">
+                <article class="card">
+                    <!-- alt text describes what is actually in the image, not just "galaxy" -->
+                    <img src="images/milkyway.jpg" loading="lazy" alt="Structure and Shape of milkyway image">
+                    <div class="card-content">
+                        <h3>Structure and Shape</h3>
+                        <p>
+                            The Milky Way is a barred spiral galaxy about 100,000 light-years wide. 
+                            It has four main spiral arms and a central bar-shaped bulge of older stars.
+                            Our Solar System sits in a smaller arm called the Orion Spur, roughly 
+                            halfway between the centre and the edge.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/blackhole.jpg" loading="lazy"  alt="Black Hole at the Centre image">
+                    <div class="card-content">
+                        <h3>The Black Hole at the Centre</h3>
+                        <p>
+                            At the very centre of the Milky Way sits a supermassive black hole called 
+                            Sagittarius A*. It has a mass about 4 million times that of our Sun. 
+                            Despite this, we are safely located 26,000 light-years away from it.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/galaxy.jpg" loading="lazy" alt="Our Place in the Galaxy image">
+                    <div class="card-content">
+                        <h3>Our Place in the Galaxy</h3>
+                        <p>
+                            The Sun completes one full orbit of the galactic centre roughly every 
+                            225-250 million years, a period sometimes called a cosmic year. 
+                            In the time since dinosaurs walked the Earth, we have barely moved 
+                            a fraction of the way around.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- extra info cards -->
+        <section aria-labelledby="more-heading">
+            <h2 class="section-title" id="more-heading">More About Our Galaxy</h2>
+            <p class="section-subtitle">Some of the most fascinating things scientists have discovered</p>
+
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Dark Matter</h3>
+                        <p>
+                            Around 85% of the Milky Way's total mass is made up of dark matter:
+                            a mysterious substance that cannot be seen directly but exerts a 
+                            gravitational pull. Without it, the outer stars in the galaxy would 
+                            spin off into space.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <h3>How Far Across?</h3>
+                        <p>
+                            Light travels at 300,000 km per second which is the fastest anything can 
+                            travel. Even at that speed, it would take 100,000 years to cross the 
+                            Milky Way from one side to the other. The distances involved are 
+                            almost impossible to fully picture.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Billions of Worlds</h3>
+                        <p>
+                            Scientists now believe that almost every star in the Milky Way has 
+                            at least one planet orbiting it. That means there could be hundreds 
+                            of billions of worlds in our galaxy alone and we have only 
+                            explored one of them.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- video section -->
+        <div class="video-section" aria-labelledby="video-heading">
+            <div class="video-container">
+                <h2 class="section-title" id="video-heading">Watch: How Big our Galaxy</h2>
+                <!-- 
+                    the title attribute on iframe is important for accessibility
+                    screen readers use it to describe what the embedded content is
+                -->
+                <div class="video-wrapper">
+                     <iframe src="https://www.youtube.com/embed/1lbooQjdgDQ?si=hrFY0rf5ARciR7j9&amp;start=56" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p style="text-align:center; color:#7070a0; font-size:0.82rem; margin-top:10px;">
+                    Source: Science Time on YouTube
+                </p>
+            </div>
+        </div>
+        <!-- call to action -->
+        <section style="text-align:center; padding: 60px 20px;" aria-label="Call to action">
+            <h2 style="font-family:'Raleway',sans-serif; color:#ffffff; font-size:1.8rem; margin-bottom:14px;">
+                Ready to Meet the Planets?
+            </h2>
+            <p style="color:#a0a0c0; max-width:480px; margin:0 auto 28px auto;">
+                From scorching Mercury to icy Neptune, find out what makes each world unique.
+            </p>
+            <a href="planets.html" class="btn">See All 8 Planets</a>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div>
+                <h4>BigPlanetarium</h4>
+                <p>A Bristol-based educational planetarium making space science accessible and exciting for everyone.</p>
+            </div>
+            <div aria-label="Footer links">
+                <h4>Pages</h4>
+                <ul style="list-style:none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul style="list-style:none;">
+                    <!-- opening in a new tab - I added aria-label to say this for screen readers -->
+                    <li><a href="https://www.nasa.gov" target="_blank" rel="noopener" aria-label="NASA website, opens in a new tab">NASA</a></li>
+                    <li><a href="https://www.esa.int" target="_blank" rel="noopener" aria-label="ESA website, opens in a new tab">ESA</a></li>
+                    <li><a href="https://unsplash.com" target="_blank" rel="noopener" aria-label="Unsplash free images, opens in a new tab">Unsplash</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BigPlanetarium, Bristol.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

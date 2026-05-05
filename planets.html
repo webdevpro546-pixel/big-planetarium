@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    planets.html - The Planets page
+    Shows all 8 planets as clickable cards
+    Clicking a card opens a modal with more info
+    lang="en" is set so screen readers read correctly
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore all 8 planets in our Solar System - from Mercury to Neptune. BigPlanetarium.">
+    <title>Planets - BigPlanetarium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">Big<span>Planetarium</span></a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                &#9776;
+            </button>
+
+            <ul class="nav-links" id="nav-menu" role="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planets.html" class="active" aria-current="page">Planets</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- page intro -->
+        <section style="padding: 60px 20px 20px 20px; max-width:1100px; margin:0 auto;" aria-labelledby="page-heading">
+            <h1 id="page-heading" style="font-size:2.4rem; color:#ffffff; margin-bottom:12px;">
+                The 8 <span style="color:#c084fc;">Planets</span>
+            </h1>
+            <p style="color:#a0a0c0; max-width:560px; font-size:1.05rem;">
+                Our Solar System has eight planets, each completely different from the last. 
+                Select any planet below to find out more about it.
+            </p>
+            <!-- small hint for users -->
+            <p style="color:#7070a0; font-size:0.85rem; margin-top:8px;">
+                Click or press Enter on a planet card to read a detailed description.
+            </p>
+        </section>
+
+        <!-- planet cards grid -->
+        <!-- I used role="list" because the grid is semantically a list of planets -->
+        <section style="padding: 30px 20px 60px; max-width:1100px; margin:0 auto;" aria-labelledby="planets-list-heading">
+            <h2 id="planets-list-heading" class="visually-hidden">All planets</h2>
+
+            <div class="planet-grid" role="list">
+
+                <!-- Mercury -->
+                <!-- tabindex="0" means keyboard users can tab to this card -->
+                <!-- role="button" tells screen readers it is interactive -->
+                <!-- aria-label gives a clear description of what clicking does -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="mercury" aria-label="Mercury - click to learn more"
+                >
+                    <h3>Mercury</h3>
+                    <span class="planet-tag">Rocky Planet: 1st from the Sun</span>
+                    <p>The smallest planet, closest to the Sun. Extreme temperatures with no atmosphere to regulate the heat.</p>
+                    <dl class="planet-facts-list" aria-label="Mercury quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>57.9 million km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>59 Earth days</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>0</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Temperature range</dt>
+                            <dd>-180&deg;C to 430&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Venus -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="venus" aria-label="Venus - click to learn more"
+                >
+                    <h3>Venus</h3>
+                    <span class="planet-tag">Rocky Planet: 2nd from the Sun</span>
+                    <p>Earth's twin in size but a world of extremes. The hottest planet due to its thick greenhouse atmosphere.</p>
+                    <dl class="planet-facts-list" aria-label="Venus quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>108.2 million km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>243 Earth days</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>0</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Average temperature</dt>
+                            <dd>465&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Earth -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="earth" aria-label="Earth - click to learn more"
+                >
+                    <h3>Earth</h3>
+                    <span class="planet-tag">Rocky Planet: 3rd from the Sun</span>
+                    <p>Our home. The only known planet with life, liquid water on its surface, and a breathable atmosphere.</p>
+                    <dl class="planet-facts-list" aria-label="Earth quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>149.6 million km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>24 hours</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>1</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Temperature range</dt>
+                            <dd>-88&deg;C to 58&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Mars -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="mars" aria-label="Mars - click to learn more"
+                >
+                    <h3>Mars</h3>
+                    <span class="planet-tag">Rocky Planet: 4th from the Sun</span>
+                    <p>The Red Planet. Home to the Solar System's tallest volcano and a target for future human exploration.</p>
+                    <dl class="planet-facts-list" aria-label="Mars quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>227.9 million km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>24.6 hours</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>2</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Temperature range</dt>
+                            <dd>-140&deg;C to 20&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Jupiter -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="jupiter" aria-label="Jupiter - click to learn more"
+                >
+                    <h3>Jupiter</h3>
+                    <span class="planet-tag">Gas Giant: 5th from the Sun</span>
+                    <p>The largest planet in the Solar System. Famous for its Great Red Spot — a storm bigger than Earth.</p>
+                    <dl class="planet-facts-list" aria-label="Jupiter quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>778.3 million km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>10 hours</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>95</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Cloud temperature</dt>
+                            <dd>-145&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Saturn -->
+                <article class="planet-card"  role="button"  tabindex="0"  data-planet="saturn" aria-label="Saturn - click to learn more"
+                >
+                    <h3>Saturn</h3>
+                    <span class="planet-tag">Gas Giant: 6th from the Sun</span>
+                    <p>Famous for its beautiful ring system made of ice and rock. The least dense planet in our Solar System.</p>
+                    <dl class="planet-facts-list" aria-label="Saturn quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>1.43 billion km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>10.7 hours</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>146</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Cloud temperature</dt>
+                            <dd>-178&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Uranus -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="uranus" aria-label="Uranus - click to learn more"
+                >
+                    <h3>Uranus</h3>
+                    <span class="planet-tag">Ice Giant: 7th from the Sun</span>
+                    <p>The tilted planet. Uranus rotates almost on its side and has a distinctive blue-green colour from methane gas.</p>
+                    <dl class="planet-facts-list" aria-label="Uranus quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>2.87 billion km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>17.2 hours</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>27</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Cloud temperature</dt>
+                            <dd>-224&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- Neptune -->
+                <article class="planet-card" role="button" tabindex="0" data-planet="neptune" aria-label="Neptune - click to learn more"
+                >
+                    <h3>Neptune</h3>
+                    <span class="planet-tag">Ice Giant: 8th from the Sun</span>
+                    <p>The furthest planet from the Sun. It has the strongest winds in the Solar System despite receiving little sunlight.</p>
+                    <dl class="planet-facts-list" aria-label="Neptune quick facts">
+                        <div class="fact-box">
+                            <dt>Distance from Sun</dt>
+                            <dd>4.5 billion km</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Length of day</dt>
+                            <dd>16.1 hours</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Moons</dt>
+                            <dd>16</dd>
+                        </div>
+                        <div class="fact-box">
+                            <dt>Cloud temperature</dt>
+                            <dd>-218&deg;C</dd>
+                        </div>
+                    </dl>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Solar system image for context -->
+        <section style="padding: 20px 20px 60px; max-width:1100px; margin:0 auto;" aria-labelledby="scale-heading">
+            <h2 class="section-title" id="scale-heading">Scale and Distance</h2>
+            <figure>
+                <img src="images/AstroHub.png" style="width:100%; border-radius:8px; border:1px solid #2a2a4a; display:block;" loading="lazy" alt="8 planets with sun images">
+                <!-- image source https://www.highpointscientific.com/media/magefan_blog/AstroHub-ThingsYouNeedToKnowAboutThePlanets-01_1.png -->
+                <figcaption style="text-align:center; color:#7070a0; font-size:0.82rem; margin-top:8px;">
+                    The 8 planets Source: https://www.highpointscientific.com/.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <!-- 
+        MODAL DIALOG
+        role="dialog" and aria-modal="true" tell screen readers
+        this is a modal that requires attention.
+        aria-labelledby links to the h2 inside it.
+        Focus management is handled in script.js
+    -->
+    <div id="planet-modal" class="modal-bg" role="dialog" aria-modal="true" aria-labelledby="modal-planet-name">
+        <div class="modal-box">
+            <button id="close-modal" class="close-btn" aria-label="Close planet information panel">&#x2715;</button>
+            <h2 id="modal-planet-name">Planet</h2>
+            <span id="modal-planet-type" class="modal-type"></span>
+            <!-- aria-live means screen readers will announce the content when it changes -->
+            <div id="modal-planet-info" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="footer-grid">
+
+            <div>
+                <h4>BigPlanetarium</h4>
+                <p>A Bristol-based educational planetarium making space science accessible and exciting for everyone.</p>
+            </div>
+
+            <div aria-label="Footer links">
+                <h4>Pages</h4>
+                <ul style="list-style:none;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Resources</h4>
+                <ul style="list-style:none;">
+                    <!-- opening in a new tab - I added aria-label to say this for screen readers -->
+                    <li><a href="https://www.nasa.gov" target="_blank" rel="noopener" aria-label="NASA website, opens in a new tab">NASA</a></li>
+                    <li><a href="https://www.esa.int" target="_blank" rel="noopener" aria-label="ESA website, opens in a new tab">ESA</a></li>
+                    <li><a href="https://unsplash.com" target="_blank" rel="noopener" aria-label="Unsplash free images, opens in a new tab">Unsplash</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 BigPlanetarium, Bristol.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
